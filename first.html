@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Convert JSON</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			    padding-left: 100px;
+                padding-top: 300px;
+		}
+	</style>
+</head>
+<body>
+    <script>
+    link = "https://s3.amazonaws.com/open-to-cors/assignment.json";
+	var request = new XMLHttpRequest();
+	request.open('GET',link,true);
+	request.onload = function(){
+	 var obj = JSON.parse(this.response);
+	 if (request.status >= 200 && request.status < 400) {
+	 var temp = obj.products;
+	 const mySet1 = new Set();
+	 mySet1=temp.keys();
+	 //for (let item of mySet1) console.log(item)
+	 console.log(typeof(temp));
+	 document.write(temp);
+	 }
+	 else{
+	  console.log("The city doesn't exist! Kindly check");
+	 }
+	}
+	request.send();
+    </script>
+</body>
+</html>

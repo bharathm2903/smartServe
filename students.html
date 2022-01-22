@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>file Type</title>
+</head>
+<body>
+	<form action="upfile.php" method="post">
+		Specify Format:
+		<br>
+		file Type: <select class="id">
+			<option>CSV</option>
+			<option>JSON</option>
+		</select>
+		<br>
+		Character Encoding: <select class="Encode">
+			<option>UTF-8</option>
+			<option>en-us</option>
+		</select>
+		<br>
+		Delimeter: <select class="delim">
+			<option>,</option>
+			<option> </option>
+			<option>/</option>
+			<option>.</option>
+		</select>
+		<br>
+		Has Header
+		<input type="checkbox" name="has">
+		<button type="submit">Serach</button>
+</form>
+</body>
+</html>
